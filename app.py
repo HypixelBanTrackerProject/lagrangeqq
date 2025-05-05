@@ -27,4 +27,4 @@ if not os.path.exists(LAGRANGE):
         tar.extract(member,'lagrange/config')
     os.remove('lagrange/config/lagrange.tar.gz')
 
-subprocess.Popen(LAGRANGE,cwd='lagrange/config')
+subprocess.run(LAGRANGE,cwd='lagrange/config')
