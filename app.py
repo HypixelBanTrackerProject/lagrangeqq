@@ -18,7 +18,7 @@ LAGRANGE = os.path.join(os.getcwd(),'lagrange','config','lagrange')
 
 shutil.copy('lagrange/appsettings.json','lagrange/config/appsettings.json')
 
-if run_lagrange and not os.path.exists(LAGRANGE):
+if not os.path.exists(LAGRANGE):
     dl = Pypdl()
     dl.start('https://github.com/LagrangeDev/Lagrange.Core/releases/download/nightly/Lagrange.OneBot_linux-x64_net9.0_SelfContained.tar.gz','lagrange/config/lagrange.tar.gz')
     with tarfile.open('lagrange/config/lagrange.tar.gz') as tar:
