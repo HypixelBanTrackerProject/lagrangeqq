@@ -14,6 +14,8 @@ appsettings['Implementations'][0]['Port'] = env_port
 with open('lagrange/appsettings.json','w',encoding='utf-8') as f:
     f.write(json.dumps(appsettings))
 
+print(f'now connect host.docker.internal:{env_port}')
+
 LAGRANGE = os.path.join(os.getcwd(),'lagrange','config','lagrange')
 
 shutil.copy('lagrange/appsettings.json','lagrange/config/appsettings.json')
