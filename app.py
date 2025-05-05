@@ -5,7 +5,7 @@ from pypdl import Pypdl
 import tarfile
 import json
 
-env_port = os.environ.get('K_PORT') or 8080
+env_port = int(os.environ.get('K_PORT')) or 8080
 
 appsettings = {}
 with open('lagrange/appsettings.json','r',encoding='utf-8') as f:
